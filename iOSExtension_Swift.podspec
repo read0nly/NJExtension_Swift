@@ -18,7 +18,9 @@ Pod::Spec.new do |s|
   s.name         = "iOSExtension_Swift"
   s.version      = "0.0.1"
   s.summary      = "A short description of iOSExtension_Swift."
-
+  s.description  = <<-DESC
+                                      A short description of iOSExtension_Swift.
+                   DESC
 
   s.homepage     = "https://github.com/read0nly/iOSExtension_Swift"
   s.license      = { :type => "MIT", :file => "LICENSE" }
