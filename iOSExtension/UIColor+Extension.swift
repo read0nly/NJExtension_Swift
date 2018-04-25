@@ -7,14 +7,14 @@
 //
 
 import UIKit
-extension UIColor{
+public extension UIColor{
 
     
     /// 根据传入的16进制颜色来生成一个颜色
     ///
     /// - Parameter hex: 十六进制色  格式 0x000000
     /// - Returns: 返回生成的颜色
-    static func nj_colorHex(hex:UInt32) -> UIColor{
+    public static func nj_colorHex(hex:UInt32) -> UIColor{
         let r = (hex & 0xff0000) >> 16
         let g = (hex & 0x00ff00) >> 8
         let b = hex & 0x0000ff
@@ -25,7 +25,7 @@ extension UIColor{
     /// 随机颜色
     ///
     /// - Returns: 返回一个随机生成的颜色
-    static func nj_randomColor() -> UIColor{
+    public static func nj_randomColor() -> UIColor{
         let red = arc4random_uniform(256)
         let green = arc4random_uniform(256)
         let blue = arc4random_uniform(256)
@@ -39,7 +39,7 @@ extension UIColor{
     ///   - green: 绿色值 0-255
     ///   - blue: 蓝色值 0-255
     /// - Returns: 返回生成的颜色
-    static func nj_colorRGB(red:UInt32, green:UInt32, blue:UInt32) -> UIColor{
+    public static func nj_colorRGB(red:UInt32, green:UInt32, blue:UInt32) -> UIColor{
         guard red > 0 ,red < 255,
             green > 0 ,green < 255,
             blue > 0 ,blue < 255

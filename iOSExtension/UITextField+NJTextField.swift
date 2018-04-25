@@ -9,9 +9,9 @@
 import UIKit
 
 
-extension UITextField {
+public extension UITextField {
     /// 占位符的颜色
-    var js_placeholderColor:UIColor {
+    public var js_placeholderColor:UIColor {
         get {
             return self.js_placeholderColor
         }

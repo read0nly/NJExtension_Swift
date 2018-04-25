@@ -8,7 +8,7 @@
 
 import Foundation
 /// 在Swift Compiler - Custom Flags   > Other Swift Flags  > Debug > -D DebugType 设置完成之后，只在debug模式下调用
-func PrintLog<N>(message:N,fileName:String = #file,methodName:String = #function,lineNumber:Int = #line){
+public func PrintLog<N>(message:N,fileName:String = #file,methodName:String = #function,lineNumber:Int = #line){
     #if DebugType
         print("\(fileName as NSString)\n方法:\(methodName)\n行号:\(lineNumber)\n打印信息\(message)");
     #endif

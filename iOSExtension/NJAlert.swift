@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NJAlert {
+open class NJAlert {
 
  
     /// 只有一个确认按钮的alert
@@ -21,7 +21,7 @@ class NJAlert {
     ///   - actionTitle: 行为  默认” 好的 ”
     ///   - actionStyle: 行为style 默认 default
     ///   - actionHandle: 行为动作
-    static func addAlertViewController(to controller:UIViewController? = UIApplication.shared.keyWindow?.rootViewController,title:String?,message:String?,actionTitle:String = "好的",actionStyle:UIAlertActionStyle = .default ,actionHandle:@escaping ()->()) {
+    public static func addAlertViewController(to controller:UIViewController? = UIApplication.shared.keyWindow?.rootViewController,title:String?,message:String?,actionTitle:String = "好的",actionStyle:UIAlertActionStyle = .default ,actionHandle:@escaping ()->()) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action) in
             actionHandle()
@@ -42,7 +42,7 @@ class NJAlert {
     ///   - actionRightStyle: 右按钮风格  默认destructive
     ///   - actionLeftHandle: 左 动作
     ///   - actionRightHandle: 右 动作
-    static func addAlertViewController(to controller:UIViewController? = UIApplication.shared.keyWindow?.rootViewController,title:String?,message:String?,actionLeftTitle:String = "取消",actionLeftStyle:UIAlertActionStyle = .cancel ,actionRightTitle:String = "确认",actionRightStyle:UIAlertActionStyle = .destructive ,actionLeftHandle:@escaping ()->(),actionRightHandle:@escaping ()->()) {
+    public static func addAlertViewController(to controller:UIViewController? = UIApplication.shared.keyWindow?.rootViewController,title:String?,message:String?,actionLeftTitle:String = "取消",actionLeftStyle:UIAlertActionStyle = .cancel ,actionRightTitle:String = "确认",actionRightStyle:UIAlertActionStyle = .destructive ,actionLeftHandle:@escaping ()->(),actionRightHandle:@escaping ()->()) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: actionLeftTitle, style: .default, handler: { (action) in
             actionLeftHandle()

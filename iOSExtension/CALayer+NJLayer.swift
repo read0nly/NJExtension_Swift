@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-extension CALayer {
+public extension CALayer {
     
 
-    var nj_transformScaleX:CGFloat {
+    public var nj_transformScaleX:CGFloat {
         get{
             let x = self.value(forKey: "transform.scale.x") as? CGFloat ?? 0
             
@@ -23,7 +23,7 @@ extension CALayer {
         }
     }
     
-    var nj_transformScaleY:CGFloat {
+    public var nj_transformScaleY:CGFloat {
         get{
             let x = self.value(forKey: "transform.scale.y") as? CGFloat ?? 0
             
@@ -34,7 +34,7 @@ extension CALayer {
         }
     }
     
-    var nj_transformRotationZ:CGFloat {
+    public var nj_transformRotationZ:CGFloat {
         get{
             let x = self.value(forKey: "transform.rotation.z") as? CGFloat ?? 0
             
